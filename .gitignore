@@ -1,5 +1,16 @@
 node_modules/
 dist/
+
+# 환경변수: .env.example만 예외로 추적
 .env
+.env.*
+!.env.example
+
+# 키/인증서
+*.pem
+*.key
+*.p12
+id_rsa*
+
 *.log
 .DS_Store
