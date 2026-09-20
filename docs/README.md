@@ -38,6 +38,9 @@ TypeSafe AI는 자유로운 문장을 생성하는 챗봇 API가 아닙니다. J
 9. [운영 환경 구성과 관측성](./09-production.md)
 10. [보안, 데이터 처리, 법무 체크리스트](./10-security.md)
 11. [한계, 실패 모드, 문제 해결](./11-troubleshooting.md)
+12. [모델, 한도, 레퍼런스 수치](./12-limits-reference.md)
+13. [한국어 워크로드 가이드](./13-korean-guide.md)
+14. [공식 문서 지도](./14-official-docs-map.md)
 
 ## 추천 학습 경로
 
@@ -47,7 +50,8 @@ TypeSafe AI는 자유로운 문장을 생성하는 챗봇 API가 아닙니다. J
 2. `02-core-concepts.md`
 3. `03-primitives.md`
 4. `04-javascript-sdk.md`
-5. 현재 프로젝트의 `src/questions.ts`와 `src/decision.ts`
+5. `12-limits-reference.md`
+6. 현재 프로젝트의 `src/questions.ts`와 `src/decision.ts`
 
 ### 실제 서비스에 적용하려는 경우
 
@@ -57,6 +61,8 @@ TypeSafe AI는 자유로운 문장을 생성하는 챗봇 API가 아닙니다. J
 4. `09-production.md`
 5. `10-security.md`
 6. `11-troubleshooting.md`
+7. `12-limits-reference.md`
+8. `13-korean-guide.md`
 
 ### 적용 사례를 찾는 경우
 
@@ -71,7 +77,10 @@ TypeSafe AI는 자유로운 문장을 생성하는 챗봇 API가 아닙니다. J
 
 ```text
 src/questions.ts
-  질문과 criteria를 중앙 관리합니다.
+  영어 instructions 질문 세트입니다.
+
+src/questions-ko.ts
+  한국어 instructions 질문 세트입니다.
 
 src/decision.ts
   모델의 확률과 confidence를 업무 정책으로 변환합니다.
@@ -79,8 +88,11 @@ src/decision.ts
 src/index.ts
   TypeSafeClient를 만들고 state와 questions를 전송합니다.
 
-test/decision.test.ts
-  API를 호출하지 않고 업무 정책을 검증합니다.
+evaluation/
+  평가셋과 지표 계산, 질문 세트 비교 스크립트입니다.
+
+test/
+  API를 호출하지 않고 정책과 지표 코드를 검증합니다.
 ```
 
 문서를 읽은 뒤에는 질문 정의부터 변경해 보는 것이 좋습니다. 모델 호출 코드보다 질문 경계와 임계값 설계가 실제 품질에 더 큰 영향을 줄 수 있습니다.

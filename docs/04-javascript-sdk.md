@@ -18,6 +18,8 @@ npm install @typesafe-ai/sdk
 npm install dotenv
 ```
 
+기본값, 한도, 요금 등 구체적인 수치는 [모델과 한도 문서](./12-limits-reference.md)에 정리되어 있습니다.
+
 ## 2. API 키 설정
 
 프로젝트 루트에 `.env`를 만듭니다.

@@ -23,3 +23,6 @@ export const triageQuestions = {
     "Very angry, hostile, or threatening to leave",
   ] as const),
 } as const;
+
+/** 질문과 criteria를 바꿀 때마다 올려서 로그와 평가 결과에 기록합니다. */
+export const QUESTION_SET_VERSION = "ticket-triage-en-v1";

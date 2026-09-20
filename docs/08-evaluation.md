@@ -246,28 +246,39 @@ interface DecisionLog {
 - downstream 업무 성공 여부
 - 고객 불만 또는 escalation
 
-## 10. 평가 자동화 예시 구조
+## 10. 이 프로젝트의 평가 도구
+
+설명만 두지 않고 실제 동작하는 평가 스크립트가 포함되어 있습니다.
 
 ```text
 evaluation/
-  cases.jsonl
-  run.ts
-  metrics.ts
-  reports/
+  cases.jsonl   사람이 정답을 단 평가 사례
+  types.ts      사례와 결과 타입
+  metrics.ts    지표 계산 순수 함수
+  run.ts        평가 실행과 리포트
+  results/      실행 결과 JSON
 ```
 
-`run.ts`:
+실행 방법:
 
-- 동일 질문 세트로 모든 사례 호출
-- 원본 응답 저장
-- 요청 실패와 재시도 기록
+```bash
+npm run eval           # 영어 질문 세트
+npm run eval:ko        # 한국어 질문 세트
+npm run eval:ko-cases  # 한국어 질문 세트로 한국어 사례만
+```
 
-`metrics.ts`:
+출력되는 내용:
 
-- primitive별 지표 계산
-- threshold sweep
-- 오류 사례 출력
-- 이전 실행과 비교
+- 부서 분류 정확도와 클래스별 precision, recall
+- confidence 임계값별 자동 처리량과 자동 처리 정확도
+- 긴급도 Noul의 yes, no, review 구간 품질
+- 불만 Score의 오차와 임계값 기준 성능
+- 오분류 사례와 해당 confidence
+- 토큰 사용량과 평균 지연
+
+`metrics.ts`는 API를 호출하지 않는 순수 함수만 포함하므로 `npm test`로 단위 테스트합니다.
+
+질문 세트를 바꿔가며 비교한 실측 예시는 [한국어 워크로드 가이드](./13-korean-guide.md)에 있습니다.
 
 ## 11. 배포 전 기준 예시
 

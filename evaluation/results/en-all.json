@@ -1,0 +1,489 @@
+{
+  "questionSet": "en",
+  "questionSetVersion": "ticket-triage-en-v1",
+  "model": "jev-1.13.0",
+  "caseCount": 16,
+  "failureCount": 0,
+  "outcomes": [
+    {
+      "id": "ko-001",
+      "language": "ko",
+      "expected": {
+        "department": "billing",
+        "urgent": false,
+        "frustration": 1
+      },
+      "predicted": {
+        "department": "billing",
+        "departmentConfidence": 1,
+        "departmentProbabilities": {
+          "technical": 0,
+          "other": 0,
+          "billing": 1,
+          "account": 0
+        },
+        "urgentNoul": 0.22,
+        "frustrationScore": 0.28,
+        "frustrationConfidence": 0.59
+      },
+      "decision": {
+        "route": "billing",
+        "priority": "normal"
+      },
+      "model": "jev-1.13.0",
+      "inputTokens": 521,
+      "outputTokens": 79,
+      "latencyMs": 712
+    },
+    {
+      "id": "ko-002",
+      "language": "ko",
+      "expected": {
+        "department": "technical",
+        "urgent": true,
+        "frustration": 2
+      },
+      "predicted": {
+        "department": "technical",
+        "departmentConfidence": 0.48,
+        "departmentProbabilities": {
+          "technical": 0.61,
+          "other": 0,
+          "billing": 0.39,
+          "account": 0
+        },
+        "urgentNoul": 0.98,
+        "frustrationScore": 1,
+        "frustrationConfidence": 1
+      },
+      "decision": {
+        "route": "human_review",
+        "priority": "human_review"
+      },
+      "model": "jev-1.13.0",
+      "inputTokens": 533,
+      "outputTokens": 79,
+      "latencyMs": 739
+    },
+    {
+      "id": "ko-003",
+      "language": "ko",
+      "expected": {
+        "department": "account",
+        "urgent": false,
+        "frustration": 0
+      },
+      "predicted": {
+        "department": "account",
+        "departmentConfidence": 1,
+        "departmentProbabilities": {
+          "billing": 0,
+          "account": 1,
+          "other": 0,
+          "technical": 0
+        },
+        "urgentNoul": 0.27,
+        "frustrationScore": 0.06,
+        "frustrationConfidence": 0.92
+      },
+      "decision": {
+        "route": "account",
+        "priority": "normal"
+      },
+      "model": "jev-1.13.0",
+      "inputTokens": 526,
+      "outputTokens": 79,
+      "latencyMs": 714
+    },
+    {
+      "id": "ko-004",
+      "language": "ko",
+      "expected": {
+        "department": "billing",
+        "urgent": false,
+        "frustration": 0
+      },
+      "predicted": {
+        "department": "billing",
+        "departmentConfidence": 1,
+        "departmentProbabilities": {
+          "technical": 0,
+          "account": 0,
+          "other": 0,
+          "billing": 1
+        },
+        "urgentNoul": 0.04,
+        "frustrationScore": 0,
+        "frustrationConfidence": 1
+      },
+      "decision": {
+        "route": "billing",
+        "priority": "normal"
+      },
+      "model": "jev-1.13.0",
+      "inputTokens": 511,
+      "outputTokens": 79,
+      "latencyMs": 722
+    },
+    {
+      "id": "ko-005",
+      "language": "ko",
+      "expected": {
+        "department": "billing",
+        "urgent": false,
+        "frustration": 2
+      },
+      "predicted": {
+        "department": "billing",
+        "departmentConfidence": 0.79,
+        "departmentProbabilities": {
+          "account": 0.01,
+          "technical": 0.14,
+          "other": 0.01,
+          "billing": 0.84
+        },
+        "urgentNoul": 0.56,
+        "frustrationScore": 1.92,
+        "frustrationConfidence": 0.88
+      },
+      "decision": {
+        "route": "human_review",
+        "priority": "human_review"
+      },
+      "model": "jev-1.13.0",
+      "inputTokens": 536,
+      "outputTokens": 79,
+      "latencyMs": 253
+    },
+    {
+      "id": "ko-006",
+      "language": "ko",
+      "expected": {
+        "department": "account",
+        "urgent": false,
+        "frustration": 1
+      },
+      "predicted": {
+        "department": "account",
+        "departmentConfidence": 0.92,
+        "departmentProbabilities": {
+          "billing": 0,
+          "account": 0.94,
+          "other": 0,
+          "technical": 0.06
+        },
+        "urgentNoul": 0.1,
+        "frustrationScore": 0.08,
+        "frustrationConfidence": 0.88
+      },
+      "decision": {
+        "route": "account",
+        "priority": "normal"
+      },
+      "model": "jev-1.13.0",
+      "inputTokens": 523,
+      "outputTokens": 79,
+      "latencyMs": 599
+    },
+    {
+      "id": "ko-007",
+      "language": "ko",
+      "expected": {
+        "department": "other",
+        "urgent": false,
+        "frustration": 0
+      },
+      "predicted": {
+        "department": "other",
+        "departmentConfidence": 1,
+        "departmentProbabilities": {
+          "other": 1,
+          "technical": 0,
+          "account": 0,
+          "billing": 0
+        },
+        "urgentNoul": 0.03,
+        "frustrationScore": 0,
+        "frustrationConfidence": 1
+      },
+      "decision": {
+        "route": "other",
+        "priority": "normal"
+      },
+      "model": "jev-1.13.0",
+      "inputTokens": 511,
+      "outputTokens": 79,
+      "latencyMs": 833
+    },
+    {
+      "id": "ko-008",
+      "language": "ko",
+      "expected": {
+        "department": "technical",
+        "urgent": false,
+        "frustration": 0
+      },
+      "predicted": {
+        "department": "technical",
+        "departmentConfidence": 1,
+        "departmentProbabilities": {
+          "account": 0,
+          "other": 0,
+          "technical": 1,
+          "billing": 0
+        },
+        "urgentNoul": 0.2,
+        "frustrationScore": 0.02,
+        "frustrationConfidence": 0.96
+      },
+      "decision": {
+        "route": "technical",
+        "priority": "normal"
+      },
+      "model": "jev-1.13.0",
+      "inputTokens": 530,
+      "outputTokens": 79,
+      "latencyMs": 1064
+    },
+    {
+      "id": "ko-009",
+      "language": "ko",
+      "expected": {
+        "department": "billing",
+        "urgent": false,
+        "frustration": 0
+      },
+      "predicted": {
+        "department": "billing",
+        "departmentConfidence": 0.89,
+        "departmentProbabilities": {
+          "technical": 0.04,
+          "other": 0.02,
+          "account": 0.01,
+          "billing": 0.93
+        },
+        "urgentNoul": 0.04,
+        "frustrationScore": 0,
+        "frustrationConfidence": 1
+      },
+      "decision": {
+        "route": "billing",
+        "priority": "normal"
+      },
+      "model": "jev-1.13.0",
+      "inputTokens": 519,
+      "outputTokens": 79,
+      "latencyMs": 1136
+    },
+    {
+      "id": "ko-010",
+      "language": "ko",
+      "expected": {
+        "department": "other",
+        "urgent": false,
+        "frustration": 0
+      },
+      "predicted": {
+        "department": "other",
+        "departmentConfidence": 0.98,
+        "departmentProbabilities": {
+          "account": 0.01,
+          "other": 0.99,
+          "billing": 0,
+          "technical": 0
+        },
+        "urgentNoul": 0.78,
+        "frustrationScore": 0.72,
+        "frustrationConfidence": 0.23
+      },
+      "decision": {
+        "route": "other",
+        "priority": "high"
+      },
+      "model": "jev-1.13.0",
+      "inputTokens": 525,
+      "outputTokens": 79,
+      "latencyMs": 1003
+    },
+    {
+      "id": "en-001",
+      "language": "en",
+      "expected": {
+        "department": "billing",
+        "urgent": false,
+        "frustration": 1
+      },
+      "predicted": {
+        "department": "billing",
+        "departmentConfidence": 1,
+        "departmentProbabilities": {
+          "other": 0,
+          "account": 0,
+          "billing": 1,
+          "technical": 0
+        },
+        "urgentNoul": 0.13,
+        "frustrationScore": 0.03,
+        "frustrationConfidence": 0.95
+      },
+      "decision": {
+        "route": "billing",
+        "priority": "normal"
+      },
+      "model": "jev-1.13.0",
+      "inputTokens": 516,
+      "outputTokens": 79,
+      "latencyMs": 1005
+    },
+    {
+      "id": "en-002",
+      "language": "en",
+      "expected": {
+        "department": "technical",
+        "urgent": true,
+        "frustration": 2
+      },
+      "predicted": {
+        "department": "technical",
+        "departmentConfidence": 0.87,
+        "departmentProbabilities": {
+          "billing": 0.09,
+          "technical": 0.91,
+          "other": 0,
+          "account": 0
+        },
+        "urgentNoul": 0.99,
+        "frustrationScore": 1,
+        "frustrationConfidence": 1
+      },
+      "decision": {
+        "route": "technical",
+        "priority": "high"
+      },
+      "model": "jev-1.13.0",
+      "inputTokens": 517,
+      "outputTokens": 79,
+      "latencyMs": 1014
+    },
+    {
+      "id": "en-003",
+      "language": "en",
+      "expected": {
+        "department": "account",
+        "urgent": false,
+        "frustration": 0
+      },
+      "predicted": {
+        "department": "account",
+        "departmentConfidence": 1,
+        "departmentProbabilities": {
+          "other": 0,
+          "billing": 0,
+          "account": 1,
+          "technical": 0
+        },
+        "urgentNoul": 0.05,
+        "frustrationScore": 0,
+        "frustrationConfidence": 1
+      },
+      "decision": {
+        "route": "account",
+        "priority": "normal"
+      },
+      "model": "jev-1.13.0",
+      "inputTokens": 505,
+      "outputTokens": 79,
+      "latencyMs": 950
+    },
+    {
+      "id": "en-004",
+      "language": "en",
+      "expected": {
+        "department": "technical",
+        "urgent": false,
+        "frustration": 0
+      },
+      "predicted": {
+        "department": "technical",
+        "departmentConfidence": 0.98,
+        "departmentProbabilities": {
+          "account": 0,
+          "other": 0.01,
+          "technical": 0.99,
+          "billing": 0
+        },
+        "urgentNoul": 0.07,
+        "frustrationScore": 0.03,
+        "frustrationConfidence": 0.95
+      },
+      "decision": {
+        "route": "technical",
+        "priority": "normal"
+      },
+      "model": "jev-1.13.0",
+      "inputTokens": 514,
+      "outputTokens": 79,
+      "latencyMs": 955
+    },
+    {
+      "id": "en-005",
+      "language": "en",
+      "expected": {
+        "department": "billing",
+        "urgent": true,
+        "frustration": 2
+      },
+      "predicted": {
+        "department": "billing",
+        "departmentConfidence": 1,
+        "departmentProbabilities": {
+          "billing": 1,
+          "technical": 0,
+          "other": 0,
+          "account": 0
+        },
+        "urgentNoul": 0.57,
+        "frustrationScore": 1,
+        "frustrationConfidence": 0.99
+      },
+      "decision": {
+        "route": "human_review",
+        "priority": "human_review"
+      },
+      "model": "jev-1.13.0",
+      "inputTokens": 513,
+      "outputTokens": 79,
+      "latencyMs": 982
+    },
+    {
+      "id": "en-006",
+      "language": "en",
+      "expected": {
+        "department": "other",
+        "urgent": false,
+        "frustration": 0
+      },
+      "predicted": {
+        "department": "billing",
+        "departmentConfidence": 0.37,
+        "departmentProbabilities": {
+          "billing": 0.53,
+          "account": 0.01,
+          "other": 0.46,
+          "technical": 0
+        },
+        "urgentNoul": 0.04,
+        "frustrationScore": 0,
+        "frustrationConfidence": 1
+      },
+      "decision": {
+        "route": "human_review",
+        "priority": "human_review"
+      },
+      "model": "jev-1.13.0",
+      "inputTokens": 509,
+      "outputTokens": 79,
+      "latencyMs": 1021
+    }
+  ]
+}
